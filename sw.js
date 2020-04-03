@@ -23,8 +23,8 @@
  * license document, but changing it is not allowed.
 */
 "use strict";
-const version = "0.0.1f";
-const appName = "quickcorpcl";
+const version = "0.0.1";
+const appName = "io.github.quickcorp";
 const cacheName = `qcobjects-app-${appName}-${version}`;
 const start_url = "/?homescreen=1";
 caches.delete(cacheName); // force to reload cache for the first time the sw is loaded
@@ -33,6 +33,8 @@ self.addEventListener('install', e => {
     caches.open(cacheName).then(cache => {
       return cache.addAll([`${start_url}`,
 	"/",
+	"LICENSE",
+	"README.md",
 	"css/components/askforquotebutton.css",
 	"css/components/blogcard.css",
 	"css/components/card.css",

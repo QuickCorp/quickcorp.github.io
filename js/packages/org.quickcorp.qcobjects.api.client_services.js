@@ -18,6 +18,21 @@ Package('org.quickcorp.qcobjects.api.client_services', [
     },
     done(standardResponse){}
   }),
+  Class('QuickCorpGithubService', JSONService, {
+    name: 'quickcorp_github',
+    external: true,
+    cached: false,
+    method: 'get',
+    basePath: '',
+    url: '',
+    withCredentials: false,
+    _new_: function(o) {
+      // service instantiated
+      this.basePath = `${CONFIG.get('quickcorp_github_api')}`;
+      this.url = `${this.basePath}repos`;
+    },
+    done(standardResponse){}
+  }),
   Class('AtomShopifyService', JSONService, {
     name: 'atomshopify',
     external: true,

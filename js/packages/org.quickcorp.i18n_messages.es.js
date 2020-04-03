@@ -161,6 +161,10 @@ Package('org.quickcorp.i18n_messages.es', [
       {
         "en":"Cancel",
         "es":"Cancelar"
+      },
+      {
+        "en":"on Github",
+        "es":"en Github"
       }
     ]
   }),
