@@ -22,16 +22,28 @@ Package('org.quickcorp.qcobjects.api.client_services', [
     name: 'quickcorp_github',
     external: true,
     cached: false,
-    method: 'get',
+    method: 'GET',
     basePath: '',
     url: '',
+    headers:{'Content-Type':'application/json'},
     withCredentials: false,
     _new_: function(o) {
       // service instantiated
       this.basePath = `${CONFIG.get('quickcorp_github_api')}`;
       this.url = `${this.basePath}repos`;
     },
-    done(standardResponse){}
+    done({request, service}){
+      service.template = JSON.stringify({result:JSON.parse(service.template).reverse().map(function (project){
+        return {
+          id:project.id,
+          description:project.description,
+          title:project.name,
+          url:project.html_url,
+          image:project.avatar_url,
+          logo:'../Q_web.png'
+        }
+      })});
+    }
   }),
   Class('AtomShopifyService', JSONService, {
     name: 'atomshopify',

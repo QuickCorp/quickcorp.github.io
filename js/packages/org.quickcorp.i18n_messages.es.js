@@ -115,8 +115,8 @@ Package('org.quickcorp.i18n_messages.es', [
         "es": "Proyectos QuickCorp"
       },
       {
-        "en": "Check out our projects here",
-        "es": "Revisa nuestros proyectos"
+        "en": "Check out our Open Source projects",
+        "es": "Revisa nuestros proyectos Open Source"
       },
       {
         "en": "here",

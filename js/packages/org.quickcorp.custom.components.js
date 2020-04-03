@@ -102,10 +102,5 @@ Package('org.quickcorp.custom.components',[
     name:'blog',
     cached:true,
     serviceClass:'AtomShopifyService'
-  }),
-  Class('GitHubProjectsComponent',Component,{
-    name:'grid',
-    cached:false,
-    serviceClass:'QuickCorpGithubService'
   })
 ]);
