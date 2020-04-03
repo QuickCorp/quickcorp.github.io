@@ -1,0 +1,16 @@
+{
+  "name": "cl.quickcorp",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/qcobjects-apache-html/quickcorp.cl.git"
+  },
+  "scripts": {
+    "start": "qcobjects-server",
+    "test": "jasmine"
+  },
+  "description": ".",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "qcobjects": "latest"
+  }
+}
